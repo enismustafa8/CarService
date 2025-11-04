@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "a36lrvlcITE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Enis\\Documents\\CarService\\CarService\\CarService.host.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Enis\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.3\\microsoft.aspnetcore.openapi.9.0.3.nupkg.sha512",
+    "C:\\Users\\Enis\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

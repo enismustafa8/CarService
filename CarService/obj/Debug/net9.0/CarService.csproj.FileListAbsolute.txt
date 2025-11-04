@@ -1,0 +1,7 @@
+C:\Users\Enis\Documents\CarService\CarService\obj\Debug\net9.0\CarService.csproj.AssemblyReference.cache
+C:\Users\Enis\Documents\CarService\CarService\obj\Debug\net9.0\CarService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Enis\Documents\CarService\CarService\obj\Debug\net9.0\CarService.AssemblyInfoInputs.cache
+C:\Users\Enis\Documents\CarService\CarService\obj\Debug\net9.0\CarService.AssemblyInfo.cs
+C:\Users\Enis\Documents\CarService\CarService\obj\Debug\net9.0\CarService.csproj.CoreCompileInputs.cache
+C:\Users\Enis\Documents\CarService\CarService\obj\Debug\net9.0\CarService.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Enis\Documents\CarService\CarService\obj\Debug\net9.0\CarService.MvcApplicationPartsAssemblyInfo.cache
