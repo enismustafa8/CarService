@@ -1,5 +1,7 @@
 ﻿using CarService.BL.Interfaces;
-using Microsoft.AspNetCore.Http;
+using CarService.Models.Dto;
+using CarService.Models.Requests;
+using MapsterMapper;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarService.Host.Controllers
@@ -8,18 +10,71 @@ namespace CarService.Host.Controllers
     [ApiController]
     public class CarsController : ControllerBase
     {
-        private readonly ICarService _carService;
+        private readonly ICarCrudService _carCrudService;
+        private readonly IMapper _mapper;
 
-        public CarsController(ICarService carService)
+        public CarsController(
+            ICarCrudService carCrudService,
+            IMapper mapper)
         {
-            _carService = carService;
+            _carCrudService = carCrudService;
+            _mapper = mapper;
         }
 
-        [HttpGet]
-        public IActionResult GetAllCars()
+        [HttpDelete]
+        public IActionResult DeleteCar(int id)
         {
-            var cars = _carService.GetAllCars();
+            if (id <= 0)
+            {
+                return BadRequest("ID must be greater than zero.");
+            }
+            var car = _carCrudService.GetById(id);
+            if (car == null)
+            {
+                return NotFound($"Car with ID {id} not found.");
+            }
+            _carCrudService.DeleteCar(id);
+            return Ok();
+        }
+
+        [HttpGet(nameof(GetById))]
+        public IActionResult GetById(int id)
+        {
+            if (id <= 0)
+            {
+                return BadRequest("ID must be greater than zero.");
+            }
+
+            var car = _carCrudService.GetById(id);
+            
+            if (car == null)
+            {
+                return NotFound($"Car with ID {id} not found.");
+            }
+
+            return Ok(car);
+        }
+
+        [HttpGet(nameof(GetAll))]
+        public IActionResult GetAll()
+        {
+            var cars = _carCrudService.GetAllCars();
             return Ok(cars);
+        }
+
+        [HttpPost]
+        public IActionResult AddCar([FromBody] AddCarRequest? carRequest)
+        {
+            if (carRequest == null)
+            {
+                return BadRequest("Car data is null.");
+            }
+
+            var car = _mapper.Map<Car>(carRequest);
+
+            _carCrudService.AddCar(car);
+
+            return Ok();
         }
     }
 }
