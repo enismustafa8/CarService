@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarService.Host", "CarService.Host\CarService.Host.csproj", "{7F97AAAF-ED77-4CEA-AA73-01F12A4BA822}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarService.DL", "CarService.DL\CarService.DL.csproj", "{664FC515-7637-45FB-AA8D-6A5AD45AAE46}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarService.Models", "CarService.Models\CarService.Models.csproj", "{F3377BF3-02D5-4813-B148-C3DBF8ACC96E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarService.Tests", "CarService.Tests\CarService.Tests.csproj", "{6030010D-D7C9-4EE3-847F-0D04CBDCB147}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,8 +35,15 @@ Global
 		{F3377BF3-02D5-4813-B148-C3DBF8ACC96E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3377BF3-02D5-4813-B148-C3DBF8ACC96E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3377BF3-02D5-4813-B148-C3DBF8ACC96E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6030010D-D7C9-4EE3-847F-0D04CBDCB147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6030010D-D7C9-4EE3-847F-0D04CBDCB147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6030010D-D7C9-4EE3-847F-0D04CBDCB147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6030010D-D7C9-4EE3-847F-0D04CBDCB147}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EFB30AC1-F39F-44DD-AC1A-A852A6FD6BA0}
 	EndGlobalSection
 EndGlobal
